@@ -1,0 +1,25 @@
+POST http://localhost:10001/items HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Soup"
+}
+
+###
+POST http://localhost:10001/items HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Canned Tuna"
+}
+
+###
+POST http://localhost:10001/items HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Milk"
+}
+
+###
+GET http://localhost:10001/items HTTP/1.1
