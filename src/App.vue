@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="LFP logo" src="./assets/logo.svg" height="100">
+  <PlaceOrder msg="LibreFoodPantry Order Example"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PlaceOrder from './components/PlaceOrder.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PlaceOrder
   }
 }
 </script>
