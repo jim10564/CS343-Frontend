@@ -1,5 +1,5 @@
 <template>
-  <div class="place-order">
+  <div>
     <h1>{{ msg }}</h1>
     <table>
       <tr>
@@ -25,7 +25,7 @@
 import axios from 'axios';
 
 export default {
-  name: 'PlaceOrder',
+  name: 'Items',
   data(){
     return {
       items: null,
@@ -35,7 +35,7 @@ export default {
     }
   }, 
   props: {
-    msg: String
+
   },
   async mounted() {
       try {

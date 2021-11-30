@@ -1,18 +1,13 @@
 <template>
   <img alt="LFP logo" src="./assets/logo.svg" height="100">
-  <PlaceOrder msg="LibreFoodPantry Order Example"/>
+  <h1>LibreFoodPantry Order Example</h1>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/Orders">Orders</router-link> |
+    <router-link to="/Items">Items</router-link>
+  </div>
+  <router-view/>
 </template>
-
-<script>
-import PlaceOrder from './components/PlaceOrder.vue'
-
-export default {
-  name: 'App',
-  components: {
-    PlaceOrder
-  }
-}
-</script>
 
 <style>
 #app {
@@ -21,6 +16,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
