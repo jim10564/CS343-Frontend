@@ -5,7 +5,7 @@
         <td>_id</td><td>name</td>
       </tr>
       <tr v-for="item in items" :key="item._id">
-        <td>{{item._id}}</td><td>{{item.name}}</td>
+        <td>{{item._id}}</td><td>{{item.name}}</td><td><button @click="deleteItem(item._id)">Delete</button></td>
       </tr>
     </table>
     <p></p>
@@ -62,6 +62,18 @@ export default {
       this.newItemName = '';
       this.addItemStatus = 'sending';
       axios.post("http://localhost:10001/items", newItem)
+          .then(() => {
+              this.addItemStatus = 'idle';
+              this.getItems();
+          })
+          .catch(error => {
+              console.error(error);
+              this.addItemStatus = 'errored';
+          })
+    },
+    deleteItem(id) {
+      console.log(id);
+      axios.delete("http://localhost:10001/items/" + id)
           .then(() => {
               this.addItemStatus = 'idle';
               this.getItems();
