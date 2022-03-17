@@ -48,7 +48,6 @@ export default {
     async getItems() {
       try {
           let itemsUrl = "http://localhost:10001/items";
-          console.log(itemsUrl);
           let response = await axios.get(itemsUrl);
           this.items = response.data;
           this.status = 'loaded';
@@ -72,7 +71,6 @@ export default {
           })
     },
     deleteItem(id) {
-      console.log(id);
       axios.delete("http://localhost:10001/items/" + id)
           .then(() => {
               this.addItemStatus = 'idle';
