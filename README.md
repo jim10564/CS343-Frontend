@@ -1,4 +1,6 @@
-# Orders
+This is a group project from my web development course.
+
+
 
 ## Project setup
 ```
